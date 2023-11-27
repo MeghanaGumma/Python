@@ -1,0 +1,13 @@
+class Solution(object):
+    def diagonalSum(self, mat):
+        n=len(mat)
+        pd=0
+        sd=0
+        for i in range(0,n):
+            for j in range(0,n):
+                if i==j:
+                        pd=pd+mat[i][j]
+                if i+j==n-1 and i!=j:
+                        sd=sd+mat[i][j]
+        return pd+sd
+        
